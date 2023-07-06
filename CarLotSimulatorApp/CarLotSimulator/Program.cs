@@ -44,7 +44,9 @@ namespace CarLotSimulator
 
 
             //Custom Constructor Syntax/Method - it was working before
-            //Car car2 = new("AlphaRomeo", "Guilietta", 1987, "shsh", "pappap", true);
+            Car car2 = new Car("AlphaRomeo", "Guilietta", 1987, "shsh", "pappap", true);
+            Car car4 = new Car("BMW", "X3", 2003, "boom", "pipip", true);
+            Car car5 = new Car("Honda", "Accord", 2001, "ffff", "tiptip", true);
             //car2.MakeEngineNoise();
             //car2.MakeHonkNoise("pappap");
 
@@ -65,13 +67,17 @@ namespace CarLotSimulator
             //carlot.mycarlot.Add(car3);
 
             carlotinstance.Listofcars.Add(car1);
-            //carlotinstance.Listofcars.Add(car2);
+            carlotinstance.Listofcars.Add(car2);
             carlotinstance.Listofcars.Add(car3);
+            carlotinstance.Listofcars.Add(car4);
+            carlotinstance.Listofcars.Add(car5);
 
             //for (int i = 0; i < Carlot.mycarlot.Count; i++)
             foreach (var item in carlotinstance.Listofcars)
-            //foreach (int i = 0; i < 3; i++)
+            //foreach (int i = 0; i < 5; i++)
             {
+                //int i = 0;
+                Carlot.numberOfCars += 1;
                 Console.WriteLine(" ");
                 Console.WriteLine("Car details");
                 Console.WriteLine(item.Make);
@@ -83,7 +89,11 @@ namespace CarLotSimulator
                 Console.WriteLine(" ");
 
                 //  Console.WriteLine(Carlot.mycarlot[i]);
+
             }
+            Console.WriteLine(" ");
+            Console.WriteLine($"The Number of cars in the lot is: {Carlot.numberOfCars}");
+            
 
         }
 
